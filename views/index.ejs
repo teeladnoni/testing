@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Express EJS Mongoose App</title>
+</head>
+<body>
+  <h1>Items List</h1>
+  <ul>
+    <% if (items.length > 0) { %>
+      <% items.forEach(function(item) { %>
+        <li>
+          <strong><%= item.name %></strong>: <%= item.description %>
+        </li>
+      <% }); %>
+    <% } else { %>
+      <li>No items found.</li>
+    <% } %>
+  </ul>
+  <p><a href="/add">Add a Sample Item</a></p>
+</body>
+</html>
